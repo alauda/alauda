@@ -12,5 +12,13 @@ func NewAlaudaCmd() *cobra.Command {
 		Long:  ``,
 	}
 
+	addCommands(alaudaCmd)
+
 	return alaudaCmd
+}
+
+func addCommands(cmd *cobra.Command) {
+	cmd.AddCommand(
+		newVersionCmd(),
+	)
 }
