@@ -4,6 +4,8 @@ GOTEST=$(GOCMD) test
 SOURCE=cmd/alauda/main.go
 TARGET=/usr/local/bin/alauda
 
+.PHONY: build test clean
+
 all: build test
 
 build: 
