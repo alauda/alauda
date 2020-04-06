@@ -7,5 +7,9 @@ import (
 
 // NewKubectlCmd creates a new embedded kubectl command.
 func NewKubectlCmd() *cobra.Command {
-	return cmd.NewDefaultKubectlCommand()
+	kubectlCmd := cmd.NewDefaultKubectlCommand()
+
+	kubectlCmd.Aliases = []string{"k", "k8s"}
+
+	return kubectlCmd
 }
