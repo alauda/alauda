@@ -13,6 +13,7 @@ var cliTests = []struct {
 }{
 	{[]string{"alauda", "version"}},
 	{[]string{"alauda", "kubectl", "get", "ns", "--insecure-skip-tls-verify=true"}},
+	{[]string{"alauda", "k", "get", "pod", "--insecure-skip-tls-verify=true"}},
 }
 
 func TestCli(t *testing.T) {
