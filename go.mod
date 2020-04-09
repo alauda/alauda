@@ -4,6 +4,7 @@ go 1.14
 
 require (
 	github.com/spf13/cobra v0.0.7
+	k8s.io/client-go v0.18.0
 	k8s.io/kubernetes v1.18.0
 )
 
