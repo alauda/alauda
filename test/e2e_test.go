@@ -5,6 +5,7 @@ import (
 	"os"
 	"testing"
 
+	"github.com/alauda/alauda/pkg/client"
 	"github.com/alauda/alauda/pkg/cmd/alauda"
 )
 
@@ -17,8 +18,10 @@ var cliTests = []struct {
 }
 
 func TestCli(t *testing.T) {
+	alaudaClient := client.NewClient()
+	alaudaClient.Initialize()
 
-	alaudaCmd := alauda.NewAlaudaCmd()
+	alaudaCmd := alauda.NewAlaudaCmd(alaudaClient)
 
 	for _, tt := range cliTests {
 		os.Args = tt.args

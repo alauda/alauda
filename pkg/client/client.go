@@ -15,8 +15,8 @@ type Client struct {
 }
 
 // NewClient creates a new Alauda API client.
-func NewClient() (*Client, error) {
-	return &Client{}, nil
+func NewClient() *Client {
+	return &Client{}
 }
 
 // Config field.
