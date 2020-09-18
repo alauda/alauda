@@ -6,6 +6,8 @@ require (
 	github.com/spf13/cobra v0.0.7
 	k8s.io/client-go v0.18.0
 	k8s.io/kubernetes v1.18.0
+	github.com/gdamore/tcell v1.4.0
+	github.com/rivo/tview v0.0.0-20200915114512-42866ecf6ca6
 )
 
 replace (
