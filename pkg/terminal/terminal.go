@@ -12,7 +12,7 @@ type Terminal struct {
 }
 
 // NewTerminal returns a new terminal window
-func NewTerminal(profileFile string) *Terminal {
+func NewTerminal() *Terminal {
 	return &Terminal{
 		application: tview.NewApplication(),
 	}
