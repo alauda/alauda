@@ -3,6 +3,7 @@ package alauda
 import (
 	"github.com/alauda/alauda/pkg/client"
 	"github.com/alauda/alauda/pkg/cmd/kubectl"
+	"github.com/alauda/alauda/pkg/cmd/term"
 	"github.com/spf13/cobra"
 )
 
@@ -23,7 +24,7 @@ func addCommands(cmd *cobra.Command, alauda client.APIClient) {
 	cmd.AddCommand(
 		newVersionCmd(alauda),
 
-		// Adding embedded kubectl commands.
 		kubectl.NewKubectlCmd(alauda),
+		term.NewTermCmd(alauda),
 	)
 }
